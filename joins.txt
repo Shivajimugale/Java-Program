@@ -1,0 +1,23 @@
+create table order1(order_id         int,
+                   item              varchar(20) NOT NULL,
+                   qty               int,
+                   dispatch_status   varchar(3));
+
+
+
+insert into order1 values(1,'Pen',20,'Yes');
+
+insert into order1 values(2,'Pencil',10,'No');
+
+insert into order1 values(3,'Sharpner',20,'Yes');
+
+insert into order1 values(4,'Rubber',20,'Yes');
+
+insert into order1 values(5,'Box',10,'No');
+
+
+select c.cust_id,c.cust_name,o.order_id,o.item,o.qty,o.dispatch_status
+ from customers c,order1 o  where c.cust_id=o.order_id;
+
+
+

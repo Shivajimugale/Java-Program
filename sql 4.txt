@@ -1,0 +1,30 @@
+create table emp(empno int,
+                 name varchar(100) not null,
+                 salary int not null,
+                 comm int,
+                 gender char not null);
+drop table emp;
+insert into emp values(1,'Scott',25000,null,'M');
+insert into emp values(2,'Rose',35000,null,'F');
+
+alter table emp Add addr char(12);
+insert into emp values(3,'Bush',45000,2000,'M','Delhi');
+
+alter table emp modify addr varchar();
+alter table emp Add constraint primary key(empno);
+//insert into emp values(1,'Bush',20000,1000,'M','London');
+update emp set addr='Delhi';
+alter table emp modify addr varchar(20) not null;
+select * from emp;
+
+alter table emp rename column addr to address;
+alter table emp rename to emps;
+
+alter table emps rename to emp;
+
+alter table emp drop primary key;
+insert into emp values(1,'John',20000,1000,'M','Delhi');
+select * from emp;
+Truncate table emp;
+select * from emp;
+drop table emp;

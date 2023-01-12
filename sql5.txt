@@ -1,0 +1,42 @@
+create table customer(cust_id              int primary key,
+                      cust_name            varchar(100) not null,
+                      gender               char,
+                      age                  int check(age>=18 and age<=90),
+                      Location             varchar(100) not null,
+                      phone_number         bigint unique,
+                      email_id             varchar(30),
+                      create_date          datetime default current_timestamp);
+
+
+insert into customer(cust_id,cust_name,Location,phone_number,email_id)
+ values(101,'Scott','london',9387012345,'scott@gmail.com');
+
+
+
+insert into customer(cust_id,cust_name,Location,phone_number,email_id,age)
+ values(102,'Bush','Mumbai',9744030871,'bush@gmail.com',80);
+
+insert into customer values(103,'Rose','F',75,'chennai',8770301452,'rose@gmail.com','2022-04-22 02:05:20');
+
+insert into customer values(104,'Rosy','F',25,'Banglore',8770301451,'rosy@gmail.com','2022-02-12 05:12:04');
+
+
+insert into customer(cust_id,cust_name,gender,age,email_id,location)values(105,'ravi','M',25,'ravi@gmail.com','Mumbai');
+
+update customer set gender='M' where cust_id in(101,102);
+
+update customer set age=55 where cust_id=101;
+
+
+
+select * from customer;
+
+
+
+ 
+
+                      
+                      
+                      
+                      
+                      

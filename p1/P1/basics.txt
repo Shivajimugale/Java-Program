@@ -1,0 +1,4 @@
+SHOW DATABASES;
+CREATE DATABASE  msql;
+USE msql;
+

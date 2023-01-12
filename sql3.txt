@@ -1,0 +1,44 @@
+create table student_details(st_id int not null,
+                     st_name varchar(50),
+                     gender char,
+                     std int,
+                     fother_name varchar(20),
+                     mother_name varchar(20),
+                     email_address varchar(100),
+                     mobile bigint,
+                     subject varchar(20),
+                     total_marks int,
+                     passed_marks int,
+                     obtained_marks int,
+                     university varchar(20),
+                     status varchar(10),
+                     yop int,
+                     percentage_marks double(3,1),
+                     grade char);
+drop table student_details;
+
+
+
+insert into student_details values(1,'Bush','m',10,'Seenu','Geetha',
+                                      'bush@gmail.com',9344030871,
+                                    'kannada',100,35,47,'SV','pass',2021,75,'B');
+
+insert into student_details values(1,'Bush','m',10,'Seenu','Geetha',
+                                      'bush@gmail.com',9344030871,
+                                    'english',100,35,84,'SV','pass',2021,80,'A');
+
+insert into student_details values(1,'Bush','m',10,'Seenu','Geetha',
+                                      'bush@gmail.com',9344030871,
+                                    'maths',100,35,75,'SV','pass',2021,75,'B');
+
+insert into student_details values(1,'Bush','m',10,'Seenu','Geetha',
+                                      'bush@gmail.com',9344030871,
+                                    'physics',100,35,80,'SV','pass',2021,80,'A');
+
+insert into student_details values(1,'Bush','m',10,'Seenu','Geetha',
+                                      'bush@gmail.com',9344030871,
+                                    'social',100,35,75,'SV','pass',2021,90,'A');
+
+
+                     
+                     

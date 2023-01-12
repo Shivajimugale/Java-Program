@@ -1,0 +1,39 @@
+class GC
+{
+ static int add(int x,int y)
+{
+return (x+y);
+}
+static int substract(int x,int y)
+{
+return(x-y);
+}
+}
+class SC extends GC
+{
+static double sine(double x)
+{
+return Math.sin(x);
+}
+}
+class FC extends GC
+{
+static double simpleInterest(double p,double t,double r);
+{
+return (p*t*r/100);
+}
+}
+class Main
+{
+public static void main(String args[])
+{
+System.out.println(SC.add(10,10));
+System.out.println(SC.subtract(10,10));
+System.out.println(SC.sine(3.0));
+System.out.println(FC.add(10,10));
+System.out.println(FC.subtract(10,10));
+System.out.println(FC.simpleIntrest(10000.0,1.0,12.0));
+}
+}
+
+

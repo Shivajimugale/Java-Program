@@ -1,0 +1,25 @@
+create table department(dept_no int primary key,
+                        dept_name varchar(20) not null);
+insert into department values(1,'IT');
+insert into department values(2,'HR');
+
+
+
+
+
+create table employee(empno int primary key,
+                      name varchar(20) not null,
+                      email varchar(20) unique not null,
+                      mobile bigint unique not null,
+                      city  varchar(20) not null,
+                      salary double  not null,
+                      dept_nos int,
+                      gender  char check(gender in('M','m','F','f')),
+                     
+constraint employee_deptno_cfk foreign key(dept_nos)references department(dept_no)on delete cascade);
+
+insert into employee values(1,'Vivek','vivek@gmail.com',9344030871,'London',25000.0,1,'M');
+
+insert into employee values(2,'Manjunath','Mnjunath@mail.com',9007001447,'Mumbai',45000.0,2,'M');
+
+

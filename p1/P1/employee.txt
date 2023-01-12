@@ -1,0 +1,58 @@
+insert into emp values(1,'SCOTT',25000.0);
+insert into emp values(2,'ROSE',55000.0);
+insert into emp values(3,'MARK',45000.0);
+insert into emp(NAME,SALARY,EMP) values('TIGER',55000.0,4);
+insert into emp(EMP,NAME) values(5,'PETER');
+insert into emp(NAME,SALARY) values('BUSH',75000.0);
+insert into emp(EMP,SALARY) values(6,5000.0);
+insert into emp values(6,'ROSE',85000.0);
+
+
+
+
+CREATE TABLE EMP(EMPID INT NOT NULL,NAME VARCHAR(100) NOT NULL,
+SALARY DOUBLE(7,2) NULL,GENDER CHAR NOT NULL,DOJ DATE NOT NULL);
+
+INSERT INTO EMP VALUES(1,'SCOTT',10000.20,'M','2022-05-11');
+INSERT INTO EMP(EMPID,NAME ,GENDER,DOJ)VALUES(2,'ROSE','F','2022-05-11');
+INSERT INTO EMP(NAME,SALARY,GENDER,DOJ)VALUES('BUSH',20000.0,'M','2022-05-11');
+
+insert into emp (empid,name)values(3,'mark');
+insert into emp values(3,'mark',30000.90,'m','2022-05-11');
+commit;
+
+
+
+
+CREATE TABLE EMP1(EMPID INT NOT NULL,NAME VARCHAR(100) NOT NULL,
+SALARY DOUBLE(7,2) default 10000.0 not null,GENDER CHAR default 'm' NOT NULL,
+DOJ DATE default (current_date) not null);
+
+
+
+
+INSERT INTO EMP1 VALUES(1,'SCOTT',10000.20,'M','2022-05-11');
+INSERT INTO EMP1(EMPID,NAME ,GENDER,DOJ)VALUES(2,'ROSE','F','2022-05-11');
+INSERT INTO EMP1(empid,NAME,doj)VALUES(3,'bush','2022-05-11');
+INSERT INTO EMP1(empid,name)VALUES(4,'peter');
+INSERT INTO EMP1(EMPID,NAME ,salary,gender,DOJ)VALUES(6,'rosey',50000,'f','2022-05-10');
+
+
+
+
+
+CREATE TABLE EMP1(EMPID INT NOT NULL,NAME VARCHAR(100) NOT NULL,
+SALARY DOUBLE(7,2) default 25000.0 not null,GENDER CHAR default 'm' NOT NULL,
+DOJ DATE default (current_timestamp)not null);
+
+
+INSERT INTO emp1 VALUES(1,'SCOTT',35000.0,'M','2022-05-11:10:05:00');
+INSERT INTO emp1(empid,name) VALUES(2,'bush');
+
+
+
+
+
+
+
+

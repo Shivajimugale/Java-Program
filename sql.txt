@@ -1,0 +1,19 @@
+create table dispatch(po_no      int,
+                      cust_id    int,
+                      status     char not null,
+constraint dispatch_pono_custid_cpk primary key(po_no,cust_id),
+constraint dis_po_cfk foreign key(cust_id)references orders(cust_id)on delete cascade);
+
+desc table dispath;
+
+insert into dispatch values(1,101,'Y');
+insert into dispatch values(2,102,'N');
+insert into dispatch values(3,101,'N');
+insert into dispatch values(4,102,'Y');
+
+commit;
+select * from dispatch;
+delete from dispatch where cust_id=101;
+delete from customer where cust_id=101;
+
+

@@ -1,0 +1,38 @@
+create table employee(eid      int,
+                      ename    varchar(20),
+                      salary   int);
+DML Operations:-
+1)Insert
+2)Update
+3)Delete
+
+
+1)Insert:-
+---------
+
+insert into employee values(1,'Scott',20000);
+
+insert into employee values(2,'Bush',20000);
+
+insert into employee values(3,'Rosy',10000);
+
+
+insert into employee values(4,'Rosy',null);
+
+
+2)Update:-
+--------
+
+update employee set salary=25000 where eid=4;
+
+
+update employee set ename='Rose' where eid=3;
+
+update employee set eid=null where eid=4;
+
+3)Delete:-
+---------
+
+delete from employee where eid=1;
+delete from employee where ename='Rose'and eid=3;
+delete from employee;
